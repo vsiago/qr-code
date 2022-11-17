@@ -1,0 +1,108 @@
+.login {
+  height: 100vh;
+  background: #F5F5F5;
+  padding-top: 3rem;
+  text-align: center;
+}
+.login-form {
+  padding: 1rem;
+  width: 100%;
+}
+.login-form label {
+  display: inline-block;
+  text-align: start;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-left: 1rem;
+  width: 100%;
+  color: #371C15;
+}
+.login-form input {
+  width: 100%;
+  height: 45px;
+  padding: 5px 10px;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  outline: none;
+  border: solid 2px #E7DCD1;
+  background: #F5F5F5;
+  transition: 0.5s;
+}
+.login-form input:focus {
+  border: solid 2px #D2A400;
+  color: #371C15;
+}
+.login-form button {
+  width: 100%;
+  background: #371C15;
+  height: 45px;
+  border-radius: 4px;
+  margin-top: 2rem;
+  border: none;
+  font-size: 1.1rem;
+}
+.login-form button:hover {
+  transition: 0.5s;
+  background: #D2A400;
+  color: #371C15;
+  cursor: pointer;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #8B735A;
+}
+
+a {
+  transition: 0.5s;
+}
+
+body {
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.flash-sucess {
+  padding: 3px;
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  background: green;
+  color: black;
+}
+
+.flash-error {
+  padding: 3px;
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  background: red;
+  color: black;
+}
+
+.flash-alert {
+  padding: 3px;
+  position: absolute;
+  height: 35px;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  background: orange;
+  color: black;
+}
+
+/*# sourceMappingURL=styles.css.map */

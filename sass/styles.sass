@@ -1,0 +1,53 @@
+@use 'variables'
+@use 'mixins'
+@use 'login'
+@use 'index'
+
+* 
+	font-family: 'Poppins', sans-serif
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	color: variables.$text-color
+
+a 
+	transition: .5s
+
+body
+	@include mixins.container
+	position: relative
+
+// Flash Messager
+
+.flash-sucess
+	padding: 3px
+	position: absolute
+	height: 35px
+	width: 100%
+	top: 0
+	z-index: 1
+	text-align: center
+	background: green
+	color: black
+
+.flash-error
+	padding: 3px
+	position: absolute
+	height: 35px
+	width: 100%
+	top: 0
+	z-index: 1
+	text-align: center
+	background: red
+	color: black
+
+.flash-alert
+	padding: 3px
+	position: absolute
+	height: 35px
+	width: 100%
+	top: 0
+	z-index: 1
+	text-align: center
+	background: orange
+	color: black
