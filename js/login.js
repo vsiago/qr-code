@@ -251,6 +251,11 @@ let cadastrarUsuario = function() {
 		//localStorage.setItem('usuario', usuario)
 		//localStorage.setItem('senha', senha)
 		
+		cadastroNome.value = ''
+		cadastroEmail.value = ''
+		cadastroSenha.value = ''
+		inputConfirmeSenha.value = ''
+		
 		flashMessage.sucessRegister()		
 		inputUsuario.focus();
 
