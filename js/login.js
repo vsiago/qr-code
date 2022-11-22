@@ -1,5 +1,10 @@
-const usuarioInput = document.querySelector('#usuario')
-const senhaInput = document.querySelector('#senha')
+const labelUsuarioLogin = document.querySelector('#labelUsuarioLogin')
+const inputUsuarioLogin = document.querySelector('#inputUsuarioLogin')
+
+const labelUsuarioSenha = document.querySelector('#labelUsuarioSenha')
+const inputUsuarioSenha = document.querySelector('#inputUsuarioSenha')
+
+
 const btnEntrar = document.querySelector('#btn')
 const alert = document.querySelector('#alert')
 const btnRegister = document.querySelector('#cadastre-se')
@@ -95,24 +100,48 @@ let flashMessage = {
 
 
 let logarUsuario = function() {
+	
+	let listaUser = []
 
-	let userValue = usuarioInput.value;
-	let passValue = senhaInput.value;
-
-	if(!userValue) {
-		flashMessage.userNull()
-
-	} else if(!passValue) {
-		flashMessage.passNull()
-
-	} else {
-			if(userValue === localStorage.getItem('usuario') && passValue === localStorage.getItem('senha')) {
-				flashMessage.sucess()
-			} else {
-				flashMessage.error()
-		}
+	let userValid = {
+		nome: '',
+		user: '',
+		senha: ''
 	}
 
+	listaUser = JSON.parse(localStorage.getItem('listaUser'))
+
+	listaUser.forEach((item) => {
+		if(inputUsuarioLogin.value == item.usuarioCad && inputUsuarioSenha.value == item.senhaCad) {
+
+			userValid = {
+				nome: item.nomeCad,
+				user: item.usuarioCad,
+				senha: item.senhaCad
+			}
+		}
+	})
+
+	if(!inputUsuarioLogin.value) {
+		flashMessage.userNull()
+	} else if(!inputUsuarioSenha.value) {
+		flashMessage.passNull()
+	} else {
+		if(inputUsuarioLogin.value == userValid.user && inputUsuarioSenha.value == userValid.senha) {
+			labelUsuarioLogin.setAttribute('style', 'color: green')
+			inputUsuarioLogin.setAttribute('style', 'border-color: green')
+			labelUsuarioSenha.setAttribute('style', 'color: green')
+			inputUsuarioSenha.setAttribute('style', 'border-color: green')
+			flashMessage.sucess()
+		} else {
+			labelUsuarioLogin.setAttribute('style', 'color: red')
+			inputUsuarioLogin.setAttribute('style', 'border-color: red')
+			labelUsuarioSenha.setAttribute('style', 'color: red')
+			inputUsuarioSenha.setAttribute('style', 'border-color: red')
+			flashMessage.error()
+			inputUsuarioLogin.focus()
+		}
+	}
 }
 
 
@@ -220,7 +249,7 @@ let cadastrarUsuario = function() {
 		//localStorage.setItem('senha', senha)
 		
 		flashMessage.sucessRegister()		
-		usuarioInput.focus();
+		inputUsuario.focus();
 
 	} else {
 		flashMessage.errorRegister()

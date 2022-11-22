@@ -47,3 +47,35 @@ function flashMessage(userNull, passNull, sucess) {
 
 
 if(userValue ===  && passValue === users.senha) {
+
+
+
+
+
+
+
+
+
+
+
+
+	let logarUsuario = function() {
+
+		let userValue = inputUsuario.value;
+		let passValue = senhaInput.value;
+	
+		if(!userValue) {
+			flashMessage.userNull()
+	
+		} else if(!passValue) {
+			flashMessage.passNull()
+	
+		} else {
+				if(userValue === localStorage.getItem('usuario') && passValue === localStorage.getItem('senha')) {
+					flashMessage.sucess()
+				} else {
+					flashMessage.error()
+			}
+		}
+	
+	}
