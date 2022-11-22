@@ -64,7 +64,7 @@ let flashMessage = {
 		}, 2000);
 	},
 
-	error: function() {
+	error: function() { 
 		alert.setAttribute('class', 'flash-error');
 		alert.innerText = 'Usuario ou senha errado!';
 
