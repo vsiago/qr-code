@@ -257,7 +257,7 @@ let cadastrarUsuario = function() {
 		inputConfirmeSenha.value = ''
 		
 		flashMessage.sucessRegister()		
-		inputUsuario.focus();
+		inputUsuarioLogin.focus();
 
 	} else {
 		flashMessage.errorRegister()
