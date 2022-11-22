@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<meta name="theme-color" content="#D2A400" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,7 @@
     <!-- Estilos da aplicação -->
     <link rel="stylesheet" href="./css/styles.css">
 		<!-- Script da aplicação -->
-		<script src="./js/index.js" defer></script>
+		<script src="./js/login.js" defer></script>
     <title>Coffe Shop - Login</title>
 	</head>
 	<body>
@@ -21,11 +21,29 @@
 			<img class="login-logo" src="./img/coffe-shop.png" alt="logo coffe shop">
 			<form id="form" class="login-form" action="">
 				<label for="">Usuário</label><br>
-				<input id="usuario" type="text" placeholder="Login"><br>
+				<input id="usuario" type="email" placeholder="Login"><br>
 				<label for="">Senha</label><br>
 				<input id="senha" type="password" placeholder="••••••••"><br>
 				<button id="btn">ENTRAR</button>
+				<button id="cadastre-se">CADASTRAR-SE</button>
 			</form>
     </main>
+
+	<main  id="mostrar-modal" class="cadastro-modal">
+
+		<form action="" class="cadastro-modal-register">
+			<button id="btnFechar" class="x">x</button>
+			<h3>Cadastre-se</h3>
+			<label id="labelNome" for="">Nome</label><br>
+			<input id="cadastroNome" type="text" name="" placeholder="Digite o seu nome" required><br>
+			<label id="labelUsuario" for="">Usuário</label><br>
+			<input id="cadastroUsuario" type="text" name="" placeholder="Digite o seu e-mail" required><br>
+			<label id="labelSenha" for="">Senha</label><br>
+			<input id="cadastroSenha"type="password" name="" placeholder="Digite a sua senha" required>
+			<label id="labelConfirmeSenha" for="">Confirmar senha</label><br>
+			<input id="inputConfirmeSenha"type="password" name="" placeholder="Digite novamente sua senha" required>
+			<button id="cadastrar">CADASTRAR</button>
+		</form>
+	</main>
 </body>
 </html>
