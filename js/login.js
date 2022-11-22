@@ -59,8 +59,11 @@ let flashMessage = {
 			alert.classList.remove('flash-sucess');
 			alert.innerText = null;
 
-			let logar = () => window.location.href = 'http://127.0.0.1:5500/index.html';
-			return logar();
+			window.location.href = 'http://127.0.0.1:5500/index.html';
+
+			let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
+			localStorage.setItem('token', token)
+			
 		}, 2000);
 	},
 
