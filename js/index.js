@@ -1,8 +1,8 @@
 if(localStorage.getItem('token' == null)) {
-	window.location.href = 'http://127.0.0.1:5500/login.html'
+	window.location.href = 'https://vsiago.github.io/qr-code/login.html'
 }
 
 function sair() {
     localStorage.removeItem('token')
-	window.location.href = 'http://127.0.0.1:5500/login.html'
+	window.location.href = 'https://vsiago.github.io/qr-code/login.html'
 }
