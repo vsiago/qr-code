@@ -59,7 +59,7 @@ let flashMessage = {
 			alert.classList.remove('flash-sucess');
 			alert.innerText = null;
 
-			window.location.href = 'http://127.0.0.1:5500/index.html';
+			window.location.href = 'https://vsiago.github.io/qr-code/login.html';
 
 			let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
 			localStorage.setItem('token', token)
