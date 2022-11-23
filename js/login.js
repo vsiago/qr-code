@@ -59,7 +59,7 @@ let flashMessage = {
 			alert.classList.remove('flash-sucess');
 			alert.innerText = null;
 
-			window.location.href = 'https://vsiago.github.io/qr-code';
+			window.location.href = 'https://vsiago-organic-space-enigma-9gxxwqqr595cpqr4-5501.preview.app.github.dev';
 
 			let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
 			localStorage.setItem('token', token)
@@ -103,7 +103,6 @@ let flashMessage = {
 
 
 let logarUsuario = function() {
-	
 	let listaUser = []
 
 	let userValid = {
@@ -136,6 +135,9 @@ let logarUsuario = function() {
 			labelUsuarioSenha.setAttribute('style', 'color: green')
 			inputUsuarioSenha.setAttribute('style', 'border-color: green')
 			flashMessage.sucess()
+
+			localStorage.setItem('userLogado', JSON.stringify(userValid))
+
 		} else {
 			labelUsuarioLogin.setAttribute('style', 'color: red')
 			inputUsuarioLogin.setAttribute('style', 'border-color: red')
@@ -151,7 +153,7 @@ let logarUsuario = function() {
 // Processar dados login
 btnEntrar.addEventListener('click', (e) => {
 	e.preventDefault()
-
+	console.log('foi')
 	logarUsuario()
 })
 
