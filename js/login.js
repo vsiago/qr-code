@@ -59,7 +59,7 @@ let flashMessage = {
 			alert.classList.remove('flash-sucess');
 			alert.innerText = null;
 
-			window.location.href = 'https://vsiago-organic-space-enigma-9gxxwqqr595cpqr4-5501.preview.app.github.dev';
+			window.location.href = 'http://127.0.0.1:5501/index.html';
 
 			let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2)
 			localStorage.setItem('token', token)
